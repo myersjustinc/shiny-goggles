@@ -8,6 +8,7 @@ body {
 article.app {
   height: 100%;
   left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
@@ -15,6 +16,8 @@ article.app {
 
 section.frame {
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: absolute;
   width: 100%;
 }

@@ -7,11 +7,14 @@ var app,
   Frame,
   FrameView;
 
-Frame = Backbone.Model.extend({
-});
+Frame = Backbone.Model.extend({});
 FrameView = Backbone.View.extend({
   tagName: 'section',
-  className: 'frame'
+  className: 'frame',
+  render: function renderFrameView() {
+    this.$el.html(this.model.content);
+    return this;
+  }
 });
 
 App = Backbone.Collection.extend({
@@ -19,17 +22,29 @@ App = Backbone.Collection.extend({
 });
 AppView = Backbone.View.extend({
   tagName: 'article',
-  className: 'app'
+  className: 'app',
+  initialize: function initializeAppView(options) {
+    this.frameViews = this.collection.reduce(function(memo, frame) {
+      var frameView;
+
+      frameView = new FrameView(frame);
+      memo[frame.get('name')] = frameView;
+
+      return memo;
+    }, {});
+    console.log(this.frameViews);
+  },
+  render: function renderAppView() {
+    this.$el.html('');  // FIXME: Add this.
+    return this;
+  }
 });
 
 app = new App(framesConfig);
 appView = new AppView({
   collection: app
 });
-console.log(app);
-console.log(appView);
 
-appView.$el.appendTo($('body'));
-console.log(appView.$el);
+appView.render().$el.appendTo($('body'));
 
 }(this, this.framesConfig, this.$, this._, this.Backbone));
