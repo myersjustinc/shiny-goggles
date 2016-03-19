@@ -4,6 +4,7 @@
 Reveal.initialize({
   height: 1920,
   margin: 0,
+  viewDistance: 1,
   width: 1080
 });
 
