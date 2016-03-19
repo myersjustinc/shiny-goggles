@@ -46,13 +46,19 @@
   width: 100% !important;
 }
 
+section .text .text-frame {
+  height: 1920px;
+  overflow-y: scroll;
+  padding: 2rem 3rem 0 !important;
+}
+
 .text {
   font-family: 'PT Serif', serif !important;
   box-sizing: border-box;
-  padding: 2rem 3rem 4rem !important;
+  padding: 0 !important;
   background: #eee;
   color: #333;
-  overflow: scroll;
+  overflow: hidden;
   width: 1080px;
   height: 1920px;
 }
