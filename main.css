@@ -17,3 +17,8 @@
   top: 50%;
   z-index: 10;
 }
+
+.reveal section h1,
+.reveal section p {
+  text-align: left;
+}
