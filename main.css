@@ -1,23 +1,19 @@
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  margin: 0;
+.reveal .slides section {
   padding: 0;
 }
 
-article.app {
-  height: 100%;
-  left: 0;
-  overflow: hidden;
+.reveal section img {
+  border: 0;
+  bottom: auto;
+  box-shadow: none;
+  display: block;
+  left: 50%;
+  margin: 0;
+  max-height: 100vh;
+  max-width: 100vw;
   position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-section.frame {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: absolute;
-  width: 100%;
+  right: auto;
+  transform: translatex(-50%);
+  top: 50%;
+  z-index: 10;
 }
