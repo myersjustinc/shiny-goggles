@@ -9,8 +9,8 @@
   display: block;
   left: 50%;
   margin: 0;
-  max-height: 100vh;
-  max-width: 100vw;
+  max-height: 1920px;
+  max-width: 1080px;
   position: absolute;
   right: auto;
   transform: translatex(-50%);
