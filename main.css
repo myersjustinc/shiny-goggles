@@ -22,3 +22,6 @@
 .reveal section p {
   text-align: left;
 }
+.reveal section p {
+  font-size: 1.5em;
+}
